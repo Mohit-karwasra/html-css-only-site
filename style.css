@@ -226,6 +226,8 @@ body {
 	}
 
 	.main-section__content {
+		line-height: 1.5rem;
+		gap: 1rem;
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
@@ -253,5 +255,11 @@ body {
 
 	.secondary-section__subtitle {
 		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 1047px) {
+	.main-section__title {
+		font-size: 2rem;
 	}
 }
