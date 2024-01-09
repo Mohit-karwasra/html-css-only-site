@@ -28,19 +28,3 @@ The Food-Web-App is a static web application showcasing different sections relat
 ## Deployment
 
 This project is deployed using vercel. The live demo can be accessed [here](https://html-css-only-site.vercel.app/).
-
-## File Structure
-
-Food-Web-App/
-│
-├── index.html
-├── style.css
-├── assets/
-│ ├── image1.jpg
-│ ├── image1.jpg
-│ ├── ...
-│ └── icons/
-│ ├── icon1.png
-│ ├── icon2.png
-│ └── ...
-└── README.md
