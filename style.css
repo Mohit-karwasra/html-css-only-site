@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto|Playfair+Display&display=swap");
+
 :root {
 	--primary-color: #ff7070;
 	--background-color: linear-gradient(90deg, #fff6ad 0.23%, #ffb0f2 99.53%);
@@ -7,11 +9,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Roboto", sans-serif;
+
 	font-size: 16px;
 }
 
 body {
+	font-family: "Roboto", sans-serif;
 	background: var(--background-color);
 }
 
