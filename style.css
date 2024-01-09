@@ -1,0 +1,253 @@
+:root {
+	--primary-color: #ff7070;
+	--background-color: linear-gradient(90deg, #fff6ad 0.23%, #ffb0f2 99.53%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+}
+
+body {
+	background: var(--background-color);
+}
+
+/* For larger screen menu links are visible */
+.hamburger-menu-icon {
+	display: none;
+}
+
+.navbar {
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	position: sticky; /* Can be set as fixed as well*/
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding: 1rem;
+}
+
+.navbar__link {
+	text-decoration: none;
+	font-family: "Playfair Display", serif;
+	color: black;
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+.navbar__link:hover {
+	color: whitesmoke;
+	text-decoration: underline;
+}
+
+/* Main Section */
+.main-section {
+	height: calc(100vh - 5vh); /* full height - navbar height of 5vh*/
+	width: 100%;
+	display: flex;
+}
+
+.main-section__image-container {
+	width: 50%;
+}
+
+.main-section__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.main-section__content {
+	background: var(--background-color);
+	line-height: 2rem;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 5rem;
+	padding-right: 5rem;
+	gap: 3rem;
+}
+
+.main-section__title {
+	font-size: 3rem;
+	letter-spacing: 2px;
+	margin-bottom: 5vh;
+}
+
+.main-section__paragraph {
+	overflow: hidden;
+	text-align: left;
+	font-size: large;
+	font-weight: lighter;
+}
+
+.main-section__button {
+	max-width: 180px;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	border: none;
+	font-size: 0.8rem;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+.main-section__button:hover {
+	background-color: rgb(255, 135, 135);
+}
+
+/* Style for the secondary section */
+.secondary-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10%;
+	height: calc(100vh - 5vh); /* full height - navbar height of 5vh*/
+}
+
+.secondary-section__images {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+	height: 400px;
+}
+
+.image-container__first {
+	display: flex;
+	gap: 2%;
+	flex-direction: column;
+	width: 50%;
+	height: 100%;
+}
+
+.image-container__first img {
+	width: 100%;
+	height: 49%;
+	object-fit: cover;
+}
+
+.image-container__second {
+	flex: 1;
+	height: 100%;
+}
+
+.image-container__second img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.secondary-section__content-container {
+	background-color: var(--primary-color);
+	height: 220px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding-left: 20px;
+	overflow: hidden;
+	margin-left: 30px;
+}
+
+.secondary-section__subtitle {
+	letter-spacing: 2px;
+	font-size: 3.5rem;
+	line-height: 3rem;
+}
+
+.secondary-section__paragraph {
+	font-size: 1rem;
+	overflow: hidden;
+}
+
+.secondary-section__link {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	text-decoration: none;
+}
+
+.secondary-section__link:hover {
+	color: whitesmoke;
+}
+
+@media only screen and (max-width: 360px) {
+	.secondary-section__subtitle {
+		font-size: 1.5;
+	}
+}
+
+@media (max-width: 880px) {
+	/* .navbar {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.navbar__link {
+		margin-bottom: 1rem;
+	} */
+
+	.navbar {
+		justify-content: flex-end;
+	}
+
+	.navbar__link {
+		display: none;
+	}
+
+	.hamburger-menu-icon {
+		display: block;
+		width: 30px;
+		height: auto;
+	}
+
+	/* Main section adjustments */
+	.main-section {
+		flex-direction: column-reverse;
+	}
+
+	.main-section__image-container {
+		width: 100%;
+	}
+
+	.main-section__content {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.main-section__title {
+		margin-top: 2vh;
+		margin-bottom: 0;
+		font-size: 2rem;
+	}
+
+	/* Secondary section adjustments */
+	.secondary-section {
+		flex-direction: column;
+		width: 100%;
+		gap: 5%;
+	}
+
+	.secondary-section__content-container {
+		height: 100%;
+		padding-top: 1vh;
+		margin: 1vw;
+		width: 98vw;
+		margin-left: 0;
+	}
+
+	.secondary-section__subtitle {
+		font-size: 2.5rem;
+	}
+}
