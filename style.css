@@ -192,6 +192,7 @@ body {
 	}
 
 	.main-section {
+		margin-top: 5vh;
 		height: auto;
 	}
 
@@ -226,6 +227,7 @@ body {
 	}
 	.main-section {
 		flex-direction: column-reverse;
+		margin-top: 5vh;
 		height: auto;
 	}
 
