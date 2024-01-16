@@ -9,7 +9,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-size: 1rem;
+
+	font-size: 16px;
 }
 
 body {
@@ -28,11 +29,10 @@ body {
 	align-items: center;
 	justify-content: space-evenly;
 	width: 100%;
-	position: fixed;
+	position: sticky; /* Can be set as fixed as well*/
 	top: 0;
 	left: 0;
 	z-index: 10;
-	height: 8vh;
 	padding: 1rem;
 }
 
@@ -52,8 +52,7 @@ body {
 
 /* Main Section */
 .main-section {
-	margin-top: 8vh;
-	height: calc(100vh - 8vh); /* full height - navbar height of 5vh*/
+	height: calc(100vh - 5vh); /* full height - navbar height of 5vh*/
 	width: 100%;
 	display: flex;
 }
@@ -63,20 +62,21 @@ body {
 }
 
 .main-section__image {
+	width: 100%;
 	height: 100%;
-	max-width: 100%;
 	object-fit: cover;
 	cursor: pointer;
 }
 
 .main-section__content {
+	background: var(--background-color);
 	line-height: 2rem;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 5vw;
-	padding-right: 5vw;
+	padding-left: 5rem;
+	padding-right: 5rem;
 	gap: 3rem;
 }
 
@@ -100,12 +100,11 @@ body {
 	border: none;
 	font-size: 0.8rem;
 	background-color: var(--primary-color);
-	color: white;
+	color: var(--secondary-color);
 	cursor: pointer;
 }
 
 .main-section__button:hover {
-	color: black;
 	background-color: rgb(255, 135, 135);
 }
 
@@ -114,16 +113,15 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 5vw;
-	max-width: 100%;
-	box-sizing: border-box;
+	padding: 10%;
+	height: calc(100vh - 5vh);
 }
 
 .secondary-section__images {
 	display: flex;
 	gap: 1rem;
 	width: 100%;
-	height: 70vh;
+	height: 400px;
 }
 
 .image-container__first {
@@ -131,6 +129,7 @@ body {
 	gap: 2%;
 	flex-direction: column;
 	width: 50%;
+	height: 100%;
 }
 
 .image-container__first img {
@@ -141,6 +140,7 @@ body {
 
 .image-container__second {
 	flex: 1;
+	height: 100%;
 }
 
 .image-container__second img {
@@ -151,33 +151,32 @@ body {
 
 .secondary-section__content-container {
 	background-color: var(--primary-color);
-	min-height: 220px;
+	height: 220px;
 	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
-	margin: 2vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	padding: 2vw;
+	flex-wrap: wrap;
+	padding-left: 20px;
 	overflow: hidden;
+	margin-left: 30px;
 }
 
 .secondary-section__subtitle {
 	letter-spacing: 2px;
-	font-size: 3.5vw;
+	font-size: 3.5rem;
 	line-height: 3rem;
 }
 
 .secondary-section__paragraph {
-	font-size: 1.5vw;
+	font-size: 1rem;
 	overflow: hidden;
 }
 
 .secondary-section__link {
 	color: black;
 	display: flex;
-	gap: 1vw;
+	gap: 10px;
 	align-items: center;
 	text-decoration: none;
 }
@@ -186,33 +185,25 @@ body {
 	color: whitesmoke;
 }
 
-@media (max-width: 360px) {
-	.navbar {
-		height: 5vh;
-	}
-
-	.main-section {
-		height: auto;
-	}
-
-	.main-section__image-container {
-		width: 100%;
-		height: 100%;
-	}
-
-	.secondary-section__paragraph {
-		font-size: large;
-	}
-
+@media only screen and (max-width: 360px) {
 	.secondary-section__subtitle {
 		font-size: 1.5;
 	}
 }
 
 @media (max-width: 880px) {
+	/* .navbar {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.navbar__link {
+		margin-bottom: 1rem;
+	} */
+
 	.navbar {
 		justify-content: flex-end;
-		height: 5vh;
 	}
 
 	.navbar__link {
@@ -224,34 +215,26 @@ body {
 		width: 30px;
 		height: auto;
 	}
+
+	/* Main section adjustments */
 	.main-section {
 		flex-direction: column-reverse;
-		height: auto;
 	}
 
 	.main-section__image-container {
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	.main-section__image {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-		cursor: pointer;
 	}
 
 	.main-section__content {
 		line-height: 1.5rem;
 		gap: 1rem;
-		padding-left: 2vw;
-		padding-right: 2vw;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.main-section__title {
-		margin-top: 1vh;
-		margin-bottom: 3vh;
+		margin-top: 2vh;
+		margin-bottom: 0;
 		font-size: 2rem;
 	}
 
@@ -270,27 +253,8 @@ body {
 		margin-left: 0;
 	}
 
-	.secondary-section__paragraph {
-		font-size: large;
-	}
-
 	.secondary-section__subtitle {
 		font-size: 2.5rem;
-	}
-}
-
-@media (max-width: 970px) {
-	.main-section__title {
-		margin-top: 6vh;
-	}
-	.main-section__paragraph {
-		font-size: smaller;
-	}
-	.main-section__button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 5vh;
 	}
 }
 
